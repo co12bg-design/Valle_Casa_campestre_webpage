@@ -1,139 +1,515 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#064b35">
-  <meta name="description" content="Valle Casa Campestre en Sabanagrande, AtlÃ¡ntico. Naturaleza, descanso, pasadÃ­as y espacios para compartir.">
+  <meta name="description" content="Valle Casa Campestre en Sabanagrande, Atlantico. Naturaleza, descanso, pasadias y espacios para compartir.">
   <meta property="og:title" content="Valle Casa Campestre">
-  <meta property="og:description" content="Naturaleza, descanso y momentos especiales. Sabanagrande, AtlÃ¡ntico.">
+  <meta property="og:description" content="Naturaleza, descanso y momentos especiales. Sabanagrande, Atlantico.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/jardines.jpg">
+
   <title>Valle Casa Campestre | Sabanagrande</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
   <style>
-    :root{--forest:#063f2e;--green:#08734f;--lime:#c8e66a;--cream:#f5f0dc;--white:#fffdf4}
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;background:var(--forest);color:var(--white);font-family:"DM Sans",sans-serif}
-    .page{max-width:540px;margin:auto;min-height:100vh;overflow:hidden;position:relative;background:
-      radial-gradient(ellipse at 8% 33%,rgba(29,119,75,.34),transparent 40%),
-      radial-gradient(ellipse at 95% 72%,rgba(27,110,69,.3),transparent 38%),
-      linear-gradient(160deg,#07553b 0%,#043c2c 55%,#022e23 100%)}
-    .hero{height:330px;position:relative;overflow:hidden}
-    .hero img{width:100%;height:100%;object-fit:cover;object-position:center 48%;filter:brightness(.78) saturate(1.06)}
-    .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,35,23,.08) 20%,rgba(3,53,37,.35) 62%,#06412f 100%)}
-    .leaf{position:absolute;z-index:2;color:#d0e97a;font-size:48px;opacity:.8;pointer-events:none}
-    .leaf.left{left:-12px;top:255px;transform:rotate(-35deg)}
-    .leaf.right{right:-15px;top:520px;transform:rotate(28deg)}
-    .content{position:relative;margin-top:-102px;padding:0 25px 34px;z-index:3}
-    .brand{text-align:center;margin-bottom:18px}
-    .brand-mark{display:inline-flex;align-items:center;justify-content:center;width:62px;height:62px;border:1px solid rgba(226,244,184,.8);border-radius:50%;background:rgba(3,74,48,.85);font-size:31px;margin-bottom:8px}
-    h1{font-family:"Playfair Display",serif;font-size:clamp(42px,11vw,58px);line-height:.95;margin:0;letter-spacing:-1.5px;color:var(--cream);text-shadow:0 3px 18px #003a29}
-    .subbrand{letter-spacing:7px;font-size:13px;font-weight:700;margin-top:10px}
-    .tagline{font-family:"Playfair Display",serif;font-style:italic;text-align:center;font-size:17px;margin:18px 0 14px;color:#f3f1dc}
-    .location{display:table;margin:0 auto 25px;border:1px solid rgba(245,240,220,.85);border-radius:30px;padding:9px 17px;font-size:14px;color:var(--cream);background:rgba(0,48,34,.4)}
-    .actions{display:grid;gap:12px}
-    .action{display:flex;align-items:center;gap:14px;min-height:68px;padding:13px 17px;border-radius:19px;border:1.5px solid var(--lime);background:linear-gradient(110deg,#08744e,#045239);color:#fffdf0;text-decoration:none;box-shadow:0 7px 0 rgba(0,27,18,.2),inset 0 1px rgba(255,255,255,.12);transition:transform .16s,filter .16s}
-    .action:hover{transform:translateY(-2px);filter:brightness(1.08)}
-    .action .ico{width:37px;flex:none;text-align:center;font-size:25px}
-    .action .label{font-weight:800;font-size:14px;letter-spacing:.15px;flex:1}
-    .action .arrow{font-size:24px;color:#e6f4bd}
-    .section{margin-top:30px}
-    .section-title{font-family:"Playfair Display",serif;font-size:25px;margin:0 0 6px;color:var(--cream)}
-    .section-copy{font-size:13px;color:#d9e7d7;line-height:1.55;margin:0 0 14px}
-    .gallery{display:grid;grid-template-columns:1fr 1fr;gap:9px}
-    .gallery figure{margin:0;position:relative;overflow:hidden;border-radius:15px;min-height:145px;background:#123}
-    .gallery figure:first-child{grid-column:span 2;height:190px}
-    .gallery img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover}
-    .gallery figcaption{position:absolute;bottom:0;left:0;right:0;padding:25px 11px 10px;background:linear-gradient(transparent,rgba(0,0,0,.72));font-size:12px;font-weight:700}
-    .social{display:flex;justify-content:center;gap:18px;margin:29px 0 12px}
-    .social a{display:grid;place-items:center;width:53px;height:53px;border:1px solid rgba(225,241,186,.85);border-radius:16px;color:#f7f2de;text-decoration:none;font-size:24px}
-    .handle{text-align:center;font-size:13px;letter-spacing:.4px;color:#e8efdb}
-    .footer{text-align:center;color:#b7d1bd;font-size:11px;padding:20px 0 7px}
-    .footer strong{color:#e8f0d8}
-    .notice{font-size:11px;color:#d0e0d0;text-align:center;margin:12px 0 0;line-height:1.45}
-    @media(min-width:600px){body{padding:22px 0}.page{border-radius:28px;box-shadow:0 20px 70px rgba(0,0,0,.35)}}
+    :root {
+      --forest: #063f2e;
+      --green: #08734f;
+      --lime: #c8e66a;
+      --cream: #f5f0dc;
+      --white: #fffdf4;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--forest);
+      color: var(--white);
+      font-family: "DM Sans", sans-serif;
+    }
+
+    .page {
+      max-width: 540px;
+      margin: auto;
+      min-height: 100vh;
+      overflow: hidden;
+      position: relative;
+      background:
+        radial-gradient(ellipse at 8% 33%, rgba(29,119,75,.34), transparent 40%),
+        radial-gradient(ellipse at 95% 72%, rgba(27,110,69,.3), transparent 38%),
+        linear-gradient(160deg, #07553b 0%, #043c2c 55%, #022e23 100%);
+    }
+
+    .hero {
+      height: 330px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 48%;
+      filter: brightness(.78) saturate(1.06);
+    }
+
+    .hero:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(0,35,23,.08) 20%,
+        rgba(3,53,37,.35) 62%,
+        #06412f 100%
+      );
+    }
+
+    .leaf {
+      position: absolute;
+      z-index: 2;
+      color: #d0e97a;
+      font-size: 48px;
+      opacity: .8;
+      pointer-events: none;
+    }
+
+    .leaf.left {
+      left: -12px;
+      top: 255px;
+      transform: rotate(-35deg);
+    }
+
+    .leaf.right {
+      right: -15px;
+      top: 520px;
+      transform: rotate(28deg);
+    }
+
+    .content {
+      position: relative;
+      margin-top: -102px;
+      padding: 0 25px 34px;
+      z-index: 3;
+    }
+
+    .brand {
+      text-align: center;
+      margin-bottom: 18px;
+    }
+
+    .brand-mark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 62px;
+      height: 62px;
+      border: 1px solid rgba(226,244,184,.8);
+      border-radius: 50%;
+      background: rgba(3,74,48,.85);
+      font-size: 31px;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(42px, 11vw, 58px);
+      line-height: .95;
+      margin: 0;
+      letter-spacing: -1.5px;
+      color: var(--cream);
+      text-shadow: 0 3px 18px #003a29;
+    }
+
+    .subbrand {
+      letter-spacing: 7px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-top: 10px;
+    }
+
+    .tagline {
+      font-family: "Playfair Display", serif;
+      font-style: italic;
+      text-align: center;
+      font-size: 17px;
+      margin: 18px 0 14px;
+      color: #f3f1dc;
+    }
+
+    .location {
+      display: table;
+      margin: 0 auto 25px;
+      border: 1px solid rgba(245,240,220,.85);
+      border-radius: 30px;
+      padding: 9px 17px;
+      font-size: 14px;
+      color: var(--cream);
+      background: rgba(0,48,34,.4);
+    }
+
+    .actions {
+      display: grid;
+      gap: 12px;
+    }
+
+    .action {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-height: 68px;
+      padding: 13px 17px;
+      border-radius: 19px;
+      border: 1.5px solid var(--lime);
+      background: linear-gradient(110deg, #08744e, #045239);
+      color: #fffdf0;
+      text-decoration: none;
+      box-shadow:
+        0 7px 0 rgba(0,27,18,.2),
+        inset 0 1px rgba(255,255,255,.12);
+      transition: transform .16s, filter .16s;
+    }
+
+    .action:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.08);
+    }
+
+    .action .ico {
+      width: 37px;
+      flex: none;
+      text-align: center;
+      font-size: 25px;
+    }
+
+    .action .label {
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: .15px;
+      flex: 1;
+    }
+
+    .action .arrow {
+      font-size: 24px;
+      color: #e6f4bd;
+    }
+
+    .section {
+      margin-top: 30px;
+    }
+
+    .section-title {
+      font-family: "Playfair Display", serif;
+      font-size: 25px;
+      margin: 0 0 6px;
+      color: var(--cream);
+    }
+
+    .section-copy {
+      font-size: 13px;
+      color: #d9e7d7;
+      line-height: 1.55;
+      margin: 0 0 14px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 9px;
+    }
+
+    .gallery figure {
+      margin: 0;
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      min-height: 145px;
+      background: #123;
+    }
+
+    .gallery figure:first-child {
+      grid-column: span 2;
+      height: 190px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      inset: 0;
+      object-fit: cover;
+    }
+
+    .gallery figcaption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 25px 11px 10px;
+      background: linear-gradient(transparent, rgba(0,0,0,.72));
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .social {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      margin: 29px 0 12px;
+    }
+
+    .social a {
+      display: grid;
+      place-items: center;
+      width: 53px;
+      height: 53px;
+      border: 1px solid rgba(225,241,186,.85);
+      border-radius: 16px;
+      color: #f7f2de;
+      text-decoration: none;
+      font-size: 24px;
+    }
+
+    .handle {
+      text-align: center;
+      font-size: 13px;
+      letter-spacing: .4px;
+      color: #e8efdb;
+    }
+
+    .footer {
+      text-align: center;
+      color: #b7d1bd;
+      font-size: 11px;
+      padding: 20px 0 7px;
+    }
+
+    .footer strong {
+      color: #e8f0d8;
+    }
+
+    .notice {
+      font-size: 11px;
+      color: #d0e0d0;
+      text-align: center;
+      margin: 12px 0 0;
+      line-height: 1.45;
+    }
+
+    @media(min-width:600px) {
+      body {
+        padding: 22px 0;
+      }
+
+      .page {
+        border-radius: 28px;
+        box-shadow: 0 20px 70px rgba(0,0,0,.35);
+      }
+    }
   </style>
 </head>
+
 <body>
+
 <main class="page">
+
   <header class="hero" aria-label="Jardines de Valle Casa Campestre">
-    <img src="assets/jardines.jpg" alt="JardÃ­n y zona verde de Valle Casa Campestre">
+    <img src="assets/jardines.jpg" alt="Jardin y zona verde de Valle Casa Campestre">
   </header>
-  <span class="leaf left" aria-hidden="true">â§</span>
-  <span class="leaf right" aria-hidden="true">â§</span>
+
+  <span class="leaf left" aria-hidden="true">&#10087;</span>
+  <span class="leaf right" aria-hidden="true">&#10087;</span>
+
   <div class="content">
+
     <section class="brand">
-      <div class="brand-mark" aria-hidden="true">âŒ‚</div>
+
+      <div class="brand-mark" aria-hidden="true">&#8962;</div>
+
       <h1>Valle Casa</h1>
+
       <div class="subbrand">CAMPESTRE</div>
-      <p class="tagline">Naturaleza, descanso y momentos especiales</p>
-      <div class="location">âŒ– &nbsp; Sabanagrande, AtlÃ¡ntico</div>
+
+      <p class="tagline">
+        Naturaleza, descanso y momentos especiales
+      </p>
+
+      <div class="location">
+        &#8982; &nbsp; Sabanagrande, Atl&aacute;ntico
+      </div>
+
     </section>
 
     <nav class="actions" aria-label="Enlaces principales">
-      <a class="action wa-link" href="#" data-message="Hola, quiero reservar un pasadÃ­a en Valle Casa Campestre.">
-        <span class="ico">â–£</span><span class="label">RESERVA TU PASADÃA</span><span class="arrow">â€º</span>
+
+      <a class="action wa-link" href="#"
+         data-message="Hola, quiero reservar un pasadia en Valle Casa Campestre.">
+        <span class="ico">&#127968;</span>
+        <span class="label">RESERVA TU PASAD&Iacute;A</span>
+        <span class="arrow">&#8250;</span>
       </a>
-      <a class="action wa-link" href="#" data-message="Hola, quisiera consultar disponibilidad y tarifas en Valle Casa Campestre.">
-        <span class="ico">â–¦</span><span class="label">CONSULTA DISPONIBILIDAD</span><span class="arrow">â€º</span>
+
+      <a class="action wa-link" href="#"
+         data-message="Hola, quisiera consultar disponibilidad y tarifas en Valle Casa Campestre.">
+        <span class="ico">&#128197;</span>
+        <span class="label">CONSULTA DISPONIBILIDAD</span>
+        <span class="arrow">&#8250;</span>
       </a>
+
       <a class="action" href="#galeria">
-        <span class="ico">â‰‹</span><span class="label">CONOCE NUESTRA PISCINA</span><span class="arrow">â€º</span>
+        <span class="ico">&#127754;</span>
+        <span class="label">CONOCE NUESTRA PISCINA</span>
+        <span class="arrow">&#8250;</span>
       </a>
-      <a class="action wa-link" href="#" data-message="Hola, quisiera informaciÃ³n sobre desayunos y experiencias en Valle Casa Campestre.">
-        <span class="ico">â˜•</span><span class="label">DESAYUNOS Y EXPERIENCIAS</span><span class="arrow">â€º</span>
+
+      <a class="action wa-link" href="#"
+         data-message="Hola, quisiera informacion sobre desayunos y experiencias en Valle Casa Campestre.">
+        <span class="ico">&#9749;</span>
+        <span class="label">DESAYUNOS Y EXPERIENCIAS</span>
+        <span class="arrow">&#8250;</span>
       </a>
-      <a class="action wa-link" href="#" data-message="Hola, quisiera cotizar un evento o celebraciÃ³n en Valle Casa Campestre.">
-        <span class="ico">â™§</span><span class="label">EVENTOS Y CELEBRACIONES</span><span class="arrow">â€º</span>
+
+      <a class="action wa-link" href="#"
+         data-message="Hola, quisiera cotizar un evento o celebracion en Valle Casa Campestre.">
+        <span class="ico">&#10024;</span>
+        <span class="label">EVENTOS Y CELEBRACIONES</span>
+        <span class="arrow">&#8250;</span>
       </a>
-      <a class="action" href="https://maps.app.goo.gl/8z1LvRtVvt2S83nG9" target="_blank" rel="noopener">
-        <span class="ico">âŒ–</span><span class="label">CÃ“MO LLEGAR</span><span class="arrow">â€º</span>
+
+      <a class="action"
+         href="https://www.google.com/maps/dir/?api=1&amp;destination=Valle%20Casa%20Campestre&amp;destination_place_id=0x8ef5d1e2ebadf395%3A0x2775f71acf644640"
+         target="_blank" rel="noopener">
+        <span class="ico">&#8982;</span>
+        <span class="label">C&Oacute;MO LLEGAR</span>
+        <span class="arrow">&#8250;</span>
       </a>
+
     </nav>
 
     <section class="section" id="galeria">
+
       <h2 class="section-title">Un espacio para disfrutar</h2>
-      <p class="section-copy">Conoce algunos rincones de nuestro espacio campestre. Las fotografÃ­as muestran las instalaciones reales.</p>
+
+      <p class="section-copy">
+        Conoce algunos rincones de nuestro espacio campestre.
+        Las fotografias muestran las instalaciones reales.
+      </p>
+
       <div class="gallery">
-        <figure><img src="assets/piscina.jpg" alt="Piscina y jardÃ­n"><figcaption>Piscina y zonas verdes</figcaption></figure>
-        <figure><img src="assets/zona-verde.jpg" alt="JardÃ­n con Ã¡rbol y columpio"><figcaption>Naturaleza y descanso</figcaption></figure>
-        <figure><img src="assets/hamacas.jpg" alt="Hamaca en terraza de palma"><figcaption>RincÃ³n para desconectar</figcaption></figure>
-        <figure><img src="assets/terraza.jpg" alt="Terraza y espacios de descanso"><figcaption>Espacios para compartir</figcaption></figure>
-        <figure><img src="assets/palapa.jpg" alt="Palapa y terraza"><figcaption>Ambiente campestre</figcaption></figure>
+
+        <figure>
+          <img src="assets/piscina.jpg" alt="Piscina y jardin">
+          <figcaption>Piscina y zonas verdes</figcaption>
+        </figure>
+
+        <figure>
+          <img src="assets/zona-verde.jpg" alt="Jardin con arbol y columpio">
+          <figcaption>Naturaleza y descanso</figcaption>
+        </figure>
+
+        <figure>
+          <img src="assets/hamacas.jpg" alt="Hamaca en terraza de palma">
+          <figcaption>Rincon para desconectar</figcaption>
+        </figure>
+
+        <figure>
+          <img src="assets/terraza.jpg" alt="Terraza y espacios de descanso">
+          <figcaption>Espacios para compartir</figcaption>
+        </figure>
+
+        <figure>
+          <img src="assets/palapa.jpg" alt="Palapa y terraza">
+          <figcaption>Ambiente campestre</figcaption>
+        </figure>
+
       </div>
     </section>
 
     <div class="social" aria-label="Redes sociales">
-      <a href="https://www.instagram.com/vallecasacampestre/" target="_blank" rel="noopener" aria-label="Instagram">â—Ž</a>
-      <a class="wa-link" href="#" data-message="Hola, vengo desde Instagram y quiero informaciÃ³n de Valle Casa Campestre." aria-label="WhatsApp">â—‰</a>
-      <a href="https://maps.app.goo.gl/8z1LvRtVvt2S83nG9" target="_blank" rel="noopener" aria-label="Google Maps">âŒ–</a>
+
+      <a href="https://www.instagram.com/vallecasacampestre/"
+         target="_blank" rel="noopener" aria-label="Instagram">
+        &#9673;
+      </a>
+
+      <a class="wa-link" href="#"
+         data-message="Hola, vengo desde Instagram y quiero informacion de Valle Casa Campestre."
+         aria-label="WhatsApp">
+        &#9742;
+      </a>
+
+      <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Valle%20Casa%20Campestre&amp;destination_place_id=0x8ef5d1e2ebadf395%3A0x2775f71acf644640"
+         target="_blank" rel="noopener" aria-label="Google Maps">
+        &#8982;
+      </a>
+
     </div>
+
     <div class="handle">@vallecasacampestre</div>
-    <p class="notice">Para reservas, disponibilidad y cotizaciones, contÃ¡ctanos directamente.</p>
-    <footer class="footer"><strong>VALLE CASA CAMPESTRE</strong><br>Sabanagrande, AtlÃ¡ntico Â· Colombia</footer>
+
+    <p class="notice">
+      Para reservas, disponibilidad y cotizaciones,
+      contactanos directamente.
+    </p>
+
+    <footer class="footer">
+      <strong>VALLE CASA CAMPESTRE</strong>
+      <br>
+      Sabanagrande, Atl&aacute;ntico &middot; Colombia
+    </footer>
+
   </div>
 </main>
+
 <script src="config.js"></script>
+
 <script>
-  const number = (window.VALLE_CONFIG && window.VALLE_CONFIG.whatsappNumber || "").replace(/\D/g, "");
+  const number = (
+    window.VALLE_CONFIG &&
+    window.VALLE_CONFIG.whatsappNumber || ""
+  ).replace(/\D/g, "");
+
   document.querySelectorAll(".wa-link").forEach(link => {
-    const message = encodeURIComponent(link.dataset.message || "Hola, quiero informaciÃ³n de Valle Casa Campestre.");
+
+    const message = encodeURIComponent(
+      link.dataset.message ||
+      "Hola, quiero informacion de Valle Casa Campestre."
+    );
+
     if (number) {
+
       link.href = `https://wa.me/${number}?text=${message}`;
       link.target = "_blank";
       link.rel = "noopener";
+
     } else {
+
       link.addEventListener("click", event => {
         event.preventDefault();
-        alert("El enlace de WhatsApp quedarÃ¡ activo cuando agreguemos el nÃºmero de contacto de Valle Casa Campestre en config.js.");
+
+        alert(
+          "El enlace de WhatsApp quedara activo cuando agreguemos el numero de contacto en config.js."
+        );
       });
+
     }
+
   });
 </script>
+
 </body>
 </html>
-
